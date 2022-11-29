@@ -1,21 +1,24 @@
 package com.example.EmployeeManiputaion.entity;
 
+import org.springframework.context.annotation.Primary;
+
+import javax.annotation.processing.Generated;
+
 public class Employee {
     private int id;
     private String name;
     private String mailId;
     private String designation;
-    private int birthDate;
-
+    private String country;
     public Employee() {
     }
 
-    public Employee(int id, String name, String mailId, String designation, int birthDate) {
+    public Employee(int id, String name, String mailId, String designation, String country) {
         this.id = id;
         this.name = name;
         this.mailId = mailId;
         this.designation = designation;
-        this.birthDate = birthDate;
+        this.country =country  ;
     }
 
     public int getId() {
@@ -50,12 +53,12 @@ public class Employee {
         this.designation = designation;
     }
 
-    public int getBirthDate() {
-        return birthDate;
+    public String getCountry() {
+        return country;
     }
 
-    public void setBirthDate(int birthDate) {
-        this.birthDate = birthDate;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     @Override
@@ -65,7 +68,7 @@ public class Employee {
                 ", name='" + name + '\'' +
                 ", mailId='" + mailId + '\'' +
                 ", designation='" + designation + '\'' +
-                ", birthDate=" + birthDate +
+                ", birthDate=" + country +
                 '}';
     }
 }
